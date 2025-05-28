@@ -2,7 +2,7 @@
 
 import numpy as np
 
-class LGM:
+class Lgm:
     def __init__(self, curva, tiempos_zeta, valores_zeta, a):
         self.curva = curva  # instancia de Curva
         self.tiempos_zeta = np.array(tiempos_zeta)
