@@ -24,7 +24,7 @@ def resolver_pde(vec_t, vec_x, lgm, swaption):
     valores = swaption.valor_swap(t=T, x=vec_x)
     payoff_terminal = np.maximum(valores, 0.0)
     sol = np.zeros((Nx, Nt))
-    sol[:, -1] = valores
+    sol[:, -1] = payoff_terminal
 
     # Resolver hacia atrás
     for i in reversed(range(Nt - 1)):
